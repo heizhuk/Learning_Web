@@ -1,0 +1,52 @@
+{% load bootstrap3 %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+
+        <title>学习笔记网站</title>
+        {% bootstrap_css %}
+        {% bootstrap_javascript %}
+    </head>
+
+    <body>
+        <!-- Static navbar -->
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="{% url "learning_logs:index" %}">
+                        学习笔记</a>
+                </div>
+
+                <div class="navbar-list">
+                    <ul class="nav navbar-nav">
+                        <li><a href="{% url "learning_logs:topics" %}">主题</a></li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        {% if user.is_authenticated %}
+                            <li><a>吔屎啦你，{{ user.username }}！</a></li>
+                            <li><a href="{% url "users:logout" %}">注销</a></li>
+                        {% else %}
+                            <li><a href="{% url "users:register" %}">注册</a></li>
+                            <li><a href="{% url "users:login" %}">登录</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+        <div class="container">
+
+            <div class="page-header">
+                {% block header %}{% endblock header %}
+            </div>
+            <div>
+                {% block content %}{% endblock content %}
+            </div>
+        </div> <!-- /container -->
+    </body>
+</html>
