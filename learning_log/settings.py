@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 's+nq4^an-i_1qs9!eyh#6rodv4#17$myw11d^34#bwqobw0_)f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["iZbp1gpbt38wekkjr36mkcZ"]
 
 
 # Application definition
@@ -129,3 +129,5 @@ LOGIN_URL = "/users/login"
 BOOTSTRAP3 = {
     "include_jquery":True,
 }
+
+STATIC_ROOT = os.path.join(BASE_DIR,"collected_static")
