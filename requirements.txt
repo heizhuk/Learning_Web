@@ -7,4 +7,4 @@ PyMySQL==0.10.0
 pytz==2020.1
 some-package==0.1
 sqlparse==0.3.1
-zipp==3.1.0
+zipp==1.2.0
