@@ -1,5 +1,5 @@
 asgiref==3.2.10
-Django==2.2.14
+Django==2.2.21
 django-bootstrap3==12.1.0
 importlib-metadata==1.7.0
 numpy==1.18.5
