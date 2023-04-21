@@ -6,5 +6,5 @@ numpy==1.18.5
 PyMySQL==0.10.0
 pytz==2020.1
 some-package==0.1
-sqlparse==0.3.1
+sqlparse==0.4.4
 zipp==1.2.0
